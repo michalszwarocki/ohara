@@ -1,0 +1,14 @@
+<mat-card class="ohara-card">
+  <mat-card-header class="ohara-card-header">
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content class="ohara-card-content">
+    @if(imageUrl) {
+      <img class="ohara-card-image" mat-card-image [src]="imageUrl" alt="Photo of a {{title}}">
+    }
+    <p class="ohara-card-content-description">
+      {{description}}
+    </p>
+  </mat-card-content>
+</mat-card>

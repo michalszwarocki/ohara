@@ -1,0 +1,9 @@
+<mat-grid-list [cols]="columns" [rowHeight]="rowHeight">
+  @for(item of items; track $index) {
+    <mat-grid-tile [colspan]="item.colspan ?? 1" [rowspan]="item.rowspan ?? 1">
+      <div class="grid-item-container">
+        <ohara-card class="grid-item" [config]="item.content"></ohara-card>
+      </div>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

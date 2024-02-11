@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, map, shareReplay } from 'rxjs';
@@ -18,7 +18,6 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [RouterModule, AsyncPipe, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatButtonModule, TranslateModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationComponent implements OnInit {
   @Input('menuToggled') set menuToggled(value: boolean) {
