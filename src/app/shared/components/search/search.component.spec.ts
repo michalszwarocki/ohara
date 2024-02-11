@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AnimeComponent } from './anime.component';
-import { StoreModule } from '@ngrx/store';
+import { SearchComponent } from './search.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('AnimeComponent', () => {
-  let component: AnimeComponent;
-  let fixture: ComponentFixture<AnimeComponent>;
+describe('SearchComponent', () => {
+  let component: SearchComponent;
+  let fixture: ComponentFixture<SearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AnimeComponent, StoreModule.forRoot(), NoopAnimationsModule, TranslateModule.forRoot()]
+      imports: [SearchComponent, NoopAnimationsModule, TranslateModule.forRoot()]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AnimeComponent);
+    fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

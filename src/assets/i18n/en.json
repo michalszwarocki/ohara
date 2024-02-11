@@ -8,5 +8,9 @@
   },
   "QUIZ": {
     "TITLE": "Quiz"
+  },
+  "COMMON": {
+    "CLEAR": "Clear",
+    "SEARCH": "Search"
   }
 }

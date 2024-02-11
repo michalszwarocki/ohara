@@ -1,1 +1,3 @@
-<p>anime works!</p>
+<ohara-search (search)="onSearchByValue($event)"></ohara-search>
+<ohara-grid-card-section [config]="cardGridConfig"></ohara-grid-card-section>
+<ohara-paginator [length]="paginatorLength" [pageIndex]="pageIndex" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (pageChanged)="onPaginatorChange($event)"></ohara-paginator>
