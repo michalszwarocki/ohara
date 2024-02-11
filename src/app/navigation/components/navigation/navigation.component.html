@@ -1,0 +1,23 @@
+<mat-sidenav-container class="navigation-container">
+  <mat-sidenav #sidenav class="navigation-sidenav"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    <mat-nav-list>
+      @for (navigation of navigations; track $index) {
+        <mat-list-item routerLink="{{ navigation.path }}" routerLinkActive="active">
+          @if(navigation['icon']) {
+            <mat-icon matListItemIcon>{{ navigation['icon'] }}</mat-icon>
+          }
+          <h3 matListItemTitle>
+            {{ navigation['name'] | translate }}
+          </h3>
+        </mat-list-item>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main class="main-container">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

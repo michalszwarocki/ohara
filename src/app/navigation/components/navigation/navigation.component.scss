@@ -1,0 +1,16 @@
+.navigation-container {
+  height: calc(100% - 64px);
+}
+
+.navigation-sidenav {
+  width: 250px;
+}
+
+.main-container {
+  padding: 15px;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
