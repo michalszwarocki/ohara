@@ -7,17 +7,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'news',
+        redirectTo: 'anime',
         pathMatch: 'full'
-      },
-      {
-        path: 'news',
-        loadChildren: () => import('./news/news.routes').then(m => m.NEWS_ROUTES),
-        data: <NavigationData> {
-          isVisibleInNavigation: true,
-          name: 'NEWS.TITLE',
-          icon: 'list_alt'
-        }
       },
       {
         path: 'anime',
@@ -26,6 +17,15 @@ export const routes: Routes = [
           isVisibleInNavigation: true,
           name: 'ANIME.TITLE',
           icon: 'movie'
+        }
+      },
+      {
+        path: 'ranking',
+        loadChildren: () => import('./ranking/ranking.routes').then(m => m.RANKING_ROUTES),
+        data: <NavigationData> {
+          isVisibleInNavigation: true,
+          name: 'RANKING.TITLE',
+          icon: 'list_alt'
         }
       },
       {
@@ -39,7 +39,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'news'
+        redirectTo: 'anime'
       }
     ]
   }
