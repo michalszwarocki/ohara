@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { CardConfig } from '../../models/card-config.model';
+import { CustomMatCardHoverDirective } from '../../directives/custom-mat-card-hover.directive';
 
 @Component({
   selector: 'ohara-card',
   standalone: true,
-  imports: [MatCardModule, MatDividerModule],
+  imports: [MatCardModule, MatDividerModule, CustomMatCardHoverDirective],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
