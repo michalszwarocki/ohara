@@ -1,1 +1,9 @@
-<p>ranking works!</p>
+<ohara-table [dataSource]="dataSource"
+             [tableConfig]="tableConfig"
+             [columnsConfig]="columnsConfig"
+             [pageIndex]="pageIndex"
+             [pageSize]="pageSize"
+             [pageSizeOptions]="pageSizeOptions"
+             [paginatorLength]="paginatorLength"
+             (sortChange)="onSortChange($event)"
+             (paginationChanged)="onPaginatorChange($event)">

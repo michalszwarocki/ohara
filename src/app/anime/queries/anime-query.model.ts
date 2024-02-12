@@ -1,5 +1,5 @@
+import { Media, MediaType } from "../../shared/queries/media.model";
 import { Page } from "../../shared/queries/page-query.model";
-import { Media, MediaType } from "./media.model";
 
 export interface AnimeQuery {
   Page: Page<Media, 'media'>;

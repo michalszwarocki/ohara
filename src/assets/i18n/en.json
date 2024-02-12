@@ -1,7 +1,14 @@
 {
   "TITLE": "Ohara",
   "RANKING": {
-    "TITLE": "Ranking"
+    "TITLE": "Ranking",
+    "COLUMNS": {
+      "RANK": "Rank",
+      "TITLE": "Title",
+      "SCORE": "Score",
+      "POPULARITY": "Popularity",
+      "TRENDING": "Trending"
+    }
   },
   "ANIME": {
     "TITLE": "Anime"
