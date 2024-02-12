@@ -3,8 +3,8 @@ import { Anime } from '../models/anime.model';
 import { Observable, map } from 'rxjs';
 import { Apollo } from 'apollo-angular';
 import { GET_ANIME_LIST } from '../queries/anime.queries';
-import { Media, MediaType } from '../queries/media.model';
 import { PaginedData } from '../../shared/models/pagined-data.model';
+import { Media, MediaType } from '../../shared/queries/media.model';
 
 @Injectable({
   providedIn: 'root'

@@ -4,6 +4,9 @@ export interface Media {
   type: MediaType;
   description: string;
   coverImage: MediaCoverImage;
+  popularity: number;
+  averageScore: number;
+  trending: number;
 }
 
 export interface MediaTitle {
@@ -18,5 +21,14 @@ export enum MediaType {
 
 export interface MediaCoverImage {
   medium: string;
+}
+
+export enum MediaSort {
+  POPULARITY = "POPULARITY",
+  POPULARITY_DESC = "POPULARITY_DESC",
+  SCORE = "SCORE",
+  SCORE_DESC = "SCORE_DESC",
+  TRENDING = "TRENDING",
+  TRENDING_DESC = "TRENDING_DESC",
 }
 

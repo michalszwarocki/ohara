@@ -14,6 +14,8 @@ import { AnimeEffects } from './state/anime/anime.effects';
 import { APOLLO_OPTIONS, Apollo } from 'apollo-angular';
 import { InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
+import { RankingEffects } from './state/ranking/ranking.effects';
+import { rankingReducer } from './state/ranking/ranking.reducer';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,9 +35,10 @@ export const appConfig: ApplicationConfig = {
     })),
     importProvidersFrom(
       StoreModule.forRoot({
-        anime: animeReducer
+        anime: animeReducer,
+        ranking: rankingReducer
       }),
-      EffectsModule.forRoot([AnimeEffects])
+      EffectsModule.forRoot([AnimeEffects, RankingEffects])
     ),
     {
       provide: APOLLO_OPTIONS,
